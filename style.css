@@ -1,0 +1,138 @@
+/* إعدادات الألوان والخلفية */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --text-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url('images/Background.jpeg'); /* تأكد من الاسم والامتداد */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li { margin: 0 15px; }
+
+nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: var(--secondary-color); }
+
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* --- نظام الكروت (Grid) --- */
+.courses-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.course-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    border: 1px solid #eee;
+    overflow: hidden; /* عشان مفيش حاجة تخرج بره الكارت */
+}
+
+.course-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border-color: var(--secondary-color);
+}
+
+/* الحل لمشكلة الصورة اللي غطت الكلام */
+.course-card img {
+    width: 100%;       /* عرض الكارت بالكامل */
+    height: 160px;     /* طول موحد لكل الصور */
+    object-fit: cover; /* يقص الصورة بشكل احترافي عشان متتمطش */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.course-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.course-card p {
+    font-size: 0.95rem;
+    color: #444;
+    margin: 5px 0;
+}
+
+.course-card .notes {
+    display: block;
+    margin-top: 10px;
+    background: #f8f9fa;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
